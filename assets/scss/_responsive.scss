@@ -1,0 +1,21 @@
+$media-ipad: 1024px;
+$media-sp: 768px;
+$media-sp2: 320px;
+
+@mixin ipad {
+  @media only screen and (max-width: $media-ipad) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media only screen and (max-width: $media-sp) {
+    @content;
+  }
+}
+
+@mixin sp2 {
+  @media only screen and (max-width: $media-sp2) {
+    @content;
+  }
+}
