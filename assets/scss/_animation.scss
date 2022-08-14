@@ -1,0 +1,79 @@
+/*********************************************/
+/*           アニメーション関数                 */
+/*********************************************/
+
+@mixin animation(
+  $name,
+  $duration: 1s,
+  $timing-function: ease,
+  $delay: 0s,
+  $iteration-count: 1,
+  $direction: normal,
+  $fill-mode: forwards
+) {
+  animation: {
+    name: $name;
+    duration: $duration;
+    timing-function: $timing-function;
+    delay: $delay;
+    iteration-count: $iteration-count;
+    direction: $direction;
+    fill-mode: $fill-mode;
+  }
+}
+
+/*********************************************/
+/*                   fade in                 */
+/*********************************************/
+/* →その場でフワッと出てくる動作 */
+.fadein {
+  opacity: 0;
+  transition: opacity 2s;
+  &.inview {
+    opacity: 1;
+  }
+}
+/* →上からくる動作 */
+.fadein_top {
+  transform: translateY(-20%);
+  opacity: 0;
+  transition: opacity 2s, transform 1s;
+  &.inview {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+/*  →左からくる動作 */
+.fadein_left {
+  transform: translateX(-20%);
+  opacity: 0;
+  transition: opacity 2s, transform 1s;
+  &.inview {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+/* →右からくる動作 */
+.fadein_right {
+  transform: translateX(20%);
+  opacity: 0;
+  transition: opacity 2s, transform 1s;
+  &.inview {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+/* →下からくる動作 */
+.fadein_bottom {
+  transform: translateY(20%);
+  opacity: 0;
+  transition: opacity 2s, transform 1s;
+  &.inview {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
