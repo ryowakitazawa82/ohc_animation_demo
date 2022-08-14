@@ -80,3 +80,11 @@ particlesJS("particles-js",{
     },
     "retina_detect":true
   });
+
+  // 雑にjsかく
+
+  const test = Document.getElementById("test");
+  const changeBgcolor = () => {
+    test.classList.add("is-active")
+  }
+  setTimeout(changeBgcolor, 3000);

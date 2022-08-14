@@ -40,3 +40,16 @@
     width:100%;
     height: 100%;
   }
+
+
+/*========= 雑に色々css当てる ===============*/
+#test {
+  height: 100vh;
+  width: 100vw;
+  background-color: #EE7800;
+  transition:background-color 1s ease-in-out;
+
+  &.is-active{
+    background-color: #46B5E9;
+  }
+}
